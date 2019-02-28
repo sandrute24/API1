@@ -9,13 +9,23 @@ module.exports = function(grunt) {
               cssDir: 'web/assets/css',
               force: true
           },
-
           dist: {
               options: {
                   environment: 'production',
                   noLineComments: true
               }
           },
+          dev: {
+              options: {
+                  noLineComments: true
+              }
+          },
+          watch: {
+              options: {
+                  noLineComments: true,
+                  watch: true
+              }
+          }
       },
       assemble: {
         options: {
@@ -32,17 +42,31 @@ module.exports = function(grunt) {
             src: ['src/templates/pages/en/*.hbs'],
             dest: './web'
         },
-      }
+    },
+    watch: {
+        options: {
+        },
+        dev: {
+            files: ['src/assets/sass/**/*.scss', 'src/templates/**/*.hbs'],
+            tasks: ['compass:dev', 'assemble:en']
+        },
+        handlebars: {
+            files: ['src/templates/*/*.hbs', 'src/templates/layouts/*.hbs' ],
+            tasks: ['assemble:en']
+        }
+    },
   });
 
   [
     'grunt-contrib-compass',
+    'grunt-contrib-watch',
     'grunt-assemble',
 ].forEach(grunt.loadNpmTasks);
 
   // Default task(s).
   grunt.registerTask('default', [
-      'compass:dist'
+      'compass:dist',
+      'assemble:en'
   ]);
 
 };

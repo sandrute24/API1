@@ -1,0 +1,33 @@
+.topbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    .nav-bar{
+        height: $nav-height;
+        background: $default-bg;
+        &--left{
+            float: left;
+            position: relative;
+            width: $nav-left-width;
+        }
+        &--right{
+            margin-left: $nav-left-width;
+            min-height: $nav-height;
+            width: calc(100vw - 240px);
+        }
+        &__lists{
+            list-style: none;
+            &--left{
+
+            }
+            &--right{
+                float: right;
+                display: inline-flex; //don't know if it's right
+            }
+            &__link{
+
+            }
+        }
+    }
+}
