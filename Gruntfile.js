@@ -11,7 +11,7 @@ module.exports = function(grunt) {
           },
           dist: {
               options: {
-                  environment: 'production',
+                  environment: 'development',
                   noLineComments: true
               }
           },
@@ -62,6 +62,27 @@ module.exports = function(grunt) {
                 src: [
                     '../../../../web/assets/images/ic_menu_24px.svg',
                     '../../../../web/assets/images/ic_notification_24px.svg',
+                    '../../../../web/assets/images/ic_home_24px.svg',
+                    '../../../../web/assets/images/ic_build_24px.svg',
+                    '../../../../web/assets/images/ic_indicator_24px.svg',
+                    '../../../../web/assets/images/ic_love_24px.svg',
+                    '../../../../web/assets/images/ic_offline_24px.svg',
+                    '../../../../web/assets/images/ic_pets_24px.svg',
+                    '../../../../web/assets/images/ic_star_24px.svg',
+                    '../../../../web/assets/images/ic_dashboard_24px.svg',
+                    '../../../../web/assets/images/ic_language_24px.svg',
+                    '../../../../web/assets/images/ic_loyalty_24px.svg',
+                    '../../../../web/assets/images/ic_front_24px.svg',
+
+
+
+
+
+
+
+
+
+
 
                 ],
                 dest: 'src/sprites',

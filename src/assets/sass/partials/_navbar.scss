@@ -1,65 +1,66 @@
-.topbar{
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    width: 100%;
-    .nav-bar{
-        position: relative;
-        height: $nav-height;
-        background: $default-bg;
-        &--left{
-            width: $nav-left-width;
-            float: left;
-            text-align: center;
-        }
-        &--right{
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-          justify-content: space-between;
-        }
-        &__lists{
-            line-height: $nav-height;
-            list-style-type: none;
-            &--left{
-            }
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
 
-            &--right{
-            display: inline-block;
-            display: inherit;
-            list-style-type: none;
+  .nav-bar {
+    position: relative;
+    height: $nav-height;
+    background: $default-bg;
 
-            &__link{
-                margin: 5px;
-                list-style-type: none;
-
-
-}
-            }
-        }
+    &--left {
+      width: $nav-left-width;
+      float: left;
+      text-align: center;
     }
+
+    &--right {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+    }
+
+    &__lists {
+      line-height: $nav-height;
+      list-style-type: none;
+
+      &--left {}
+
+      &--right {
+        display: inline-block;
+        display: inherit;
+        list-style-type: none;
+
+        &__link {
+          margin: 5px;
+          list-style-type: none;
+        }
+      }
+    }
+  }
 }
 
 .nav-bar__lists__link {
   margin: 5px;
-  display: inherit;
-
+  margin-top: 25px;
+  margin-right: 900px;
 }
 
 .svg-icon {
   width: 20px;
   height: 20px;
   fill: green;
-
-
+  margin: 10px;
 }
 
 .search-container {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   display: inherit;
   margin-top: 25px;
   margin-right: 900px;

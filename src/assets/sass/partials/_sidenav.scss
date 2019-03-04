@@ -1,0 +1,43 @@
+.side-menu {
+  position: fixed;
+  top: $nav-height;
+  height: 100%;
+  background: #fff;
+  width: $nav-left-width;
+  -webkit-box-shadow: $box-shadow;
+  box-shadow: $box-shadow;
+  overflow: scroll;
+  padding: 20px 0 80px;
+
+  &__lists {
+    &__list {
+      padding: 12px 20px;
+      position: relative;
+
+      &:hover {
+        background-color: yellow;
+        width: auto;
+        height: auto;
+
+        a {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+        }
+
+        svg {}
+      }
+
+      &:after {
+        @include arrow();
+      }
+    }
+    &__title {
+      padding: 12px 20px;
+      font-size: 12px;
+    }
+  }
+}
