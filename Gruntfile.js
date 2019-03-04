@@ -31,7 +31,7 @@ module.exports = function(grunt) {
         options: {
             layoutdir: 'src/templates/layouts',
             layout: ['default.hbs'],
-            partials: ['src/templates/partials/{,*/}*.*'],
+            partials: ['src/templates/partials/{,*/}*.*', 'src/sprites/svg/*'],
             helpers: ['partial'],
             flatten: true
         },
@@ -55,12 +55,40 @@ module.exports = function(grunt) {
             tasks: ['assemble:en']
         }
     },
+
+    svg_sprite: {
+            generate: {
+                cwd: 'web/assets/vendor/material-design-icons',
+                src: [
+                    '../../../../web/assets/images/ic_menu_24px.svg',
+                    '../../../../web/assets/images/ic_notification_24px.svg',
+
+                ],
+                dest: 'src/sprites',
+                options: {
+                    shape: {
+                        id: {
+                            generator: function(filename) {
+                                var id = filename.match(/ic_(\w+)_\d+/);
+                                return id[1];
+                            }
+                        },
+                    },
+                    mode: {
+                        symbol: {
+                            dest: ''
+                        }
+                    }
+                }
+            }
+        },
   });
 
   [
     'grunt-contrib-compass',
     'grunt-contrib-watch',
     'grunt-assemble',
+    'grunt-svg-sprite'
 ].forEach(grunt.loadNpmTasks);
 
   // Default task(s).
