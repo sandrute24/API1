@@ -8,17 +8,12 @@
   box-shadow: $box-shadow;
   overflow: scroll;
   padding: 20px 0 80px;
+  padding-left: 15px;
 
   &__lists {
     &__list {
       padding: 12px 20px;
       position: relative;
-
-      &:hover {
-        background-color: yellow;
-        width: auto;
-        height: auto;
-
         a {
           display: -webkit-box;
           display: -ms-flexbox;
@@ -28,16 +23,24 @@
           align-items: center;
         }
 
+        &:after {
+          @include arrow();
+        }
+
+        &.active {
+          a {
+            color: red;
+          }
+        }
+      }
+
         svg {}
       }
 
-      &:after {
-        @include arrow();
-      }
-    }
+
+
     &__title {
       padding: 12px 20px;
       font-size: 12px;
     }
-  }
 }
