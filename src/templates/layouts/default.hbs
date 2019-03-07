@@ -4,20 +4,27 @@
 <head>
   <meta charset="utf-8">
   <title></title>
-  <link rel="stylesheet" href="assets/css/app.css">
+
+
+
+  {{#is default.lang 'lt'}}
+    <link rel="stylesheet" href="../assets/css/app.css">
+    {{else}}
+      <link rel="stylesheet" href="../assets/css/app.css">
+  {{/is}}
+
+
 </head>
 
 <body>
   {{>navbar}}
   {{>sidenav}}
 
-<div class="section-container">
-  {{body}}
-</div>
+  <div class="section-container">
+    {{>title}}
+    {{body}}
+  </div>
 
-
-
-  {{>body}}
   {{#is basename 'index'}}
     {{>footer}}
   {{/is}}
@@ -27,42 +34,39 @@
 
 
   <script "text/javascript" src="../node_modules/chart.js/dist/chart.js"></script>
-<script type="text/javascript">
+  <script type="text/javascript">
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var chart = new Chart(ctx, {
+      // The type of chart we want to create
+      type: 'line',
 
-  var ctx = document.getElementById('myChart').getContext('2d');
-var chart = new Chart(ctx, {
-    // The type of chart we want to create
-    type: 'line',
-
-    // The data for our dataset
-    data: {
+      // The data for our dataset
+      data: {
         labels: ["January", "February", "March", "April", "May", "June", "July"],
         datasets: [{
-            label: "My First dataset",
-            backgroundColor: 'rgb(255,215,0)',
-            borderColor: 'rgb(255,69,0)',
-            data: [0, 10, 5, 2, 20, 30, 45],
+          label: "My First dataset",
+          backgroundColor: 'rgb(255,215,0)',
+          borderColor: 'rgb(255,69,0)',
+          data: [0, 10, 5, 2, 20, 30, 45],
         }]
-    },
+      },
 
-    // Configuration options go here
-    options: {}
-});
+      // Configuration options go here
+      options: {}
+    });
+  </script>
 
-</script>
+  <script "text/javascript" src="../node_modules/chart.js/dist/chart.js"></script>
+  <script type="text/javascript">
+    var ctx = document.getElementById('myChart2').getContext('2d');
+    var chart = new Chart(ctx, {
+      // The type of chart we want to create
+      type: 'radar',
 
-<script "text/javascript" src="../node_modules/chart.js/dist/chart.js"></script>
-<script type="text/javascript">
-
-var ctx = document.getElementById('myChart2').getContext('2d');
-var chart = new Chart(ctx, {
-  // The type of chart we want to create
-  type: 'radar',
-
-  // The data for our dataset
-  data: {
-      labels: ["January", "February", "March", "April", "May", "June", "July"],
-      datasets: [{
+      // The data for our dataset
+      data: {
+        labels: ["January", "February", "March", "April", "May", "June", "July"],
+        datasets: [{
           label: "My First dataset",
           backgroundColor: 'rgb(255, 99, 132)',
           backgroundColor: 'rgb(255, 45, 132)',
@@ -70,27 +74,25 @@ var chart = new Chart(ctx, {
 
           borderColor: 'rgb(255, 99, 132)',
           data: [0, 10, 5, 2, 20, 30, 45],
-      }]
-  },
+        }]
+      },
 
-  // Configuration options go here
-  options: {}
-});
+      // Configuration options go here
+      options: {}
+    });
+  </script>
 
-</script>
+  <script "text/javascript" src="../node_modules/chart.js/dist/chart.js"></script>
+  <script type="text/javascript">
+    var ctx = document.getElementById('myChart3').getContext('2d');
+    var chart = new Chart(ctx, {
+      // The type of chart we want to create
+      type: 'doughnut',
 
-<script "text/javascript" src="../node_modules/chart.js/dist/chart.js"></script>
-<script type="text/javascript">
-
-var ctx = document.getElementById('myChart3').getContext('2d');
-var chart = new Chart(ctx, {
-  // The type of chart we want to create
-  type: 'doughnut',
-
-  // The data for our dataset
-  data: {
-      labels: ["January", "February", "March", "April", "May", "June", "July"],
-      datasets: [{
+      // The data for our dataset
+      data: {
+        labels: ["January", "February", "March", "April", "May", "June", "July"],
+        datasets: [{
           label: "My First dataset",
           backgroundColor: 'rgb(125, 99, 132)',
           backgroundColor: 'rgb(55, 99, 132)',
@@ -102,18 +104,18 @@ var chart = new Chart(ctx, {
 
           borderColor: 'rgb(255, 99, 132)',
           data: [0, 10, 5, 2, 20, 30, 45],
-      }]
-  },
+        }]
+      },
 
-  // Configuration options go here
-  options: {}
-});
-
-</script>
+      // Configuration options go here
+      options: {}
+    });
+  </script>
 
 
 
 
 
 </body>
+
 </html>

@@ -1,0 +1,17 @@
+main:
+  dashboard: Pagrindinis
+  kit: UX Įrankiai
+  typo: Šriftai
+  components: Komponentai
+more:
+  tables: Lentelės
+  charts: Diagramos
+  maps: Žemėlapiai
+  mail: Paštas
+extras:
+  pages: Puslapiai
+  extras: Papildomi
+  level: Lygiai
+  boxes: Dežės
+  utils: Įrankiai
+  tools: Programos

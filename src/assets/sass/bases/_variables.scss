@@ -5,6 +5,8 @@ $border-radius: 3px;
 $nav-left-width: 240px;
 $box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
 $bg-color: #ebebeb;
+$border-color: blue;
+$hover-background: gray;
 
 $color-success: rgba(102, 187, 106, 0.75);
 $color-success-ol: rgba(102, 187, 106, 0.35);
@@ -17,3 +19,7 @@ $color-danger-ol: rgba(238, 110, 115, 0.35);
 
 $color-secondary: rgba(156, 39, 176, 0.75);
 $color-secondary-ol: rgba(156, 39, 176, 0.35);
+
+$color-admin:gold;
+$color-user: green;
+$color-master: red;

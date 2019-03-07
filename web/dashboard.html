@@ -4,7 +4,12 @@
 <head>
   <meta charset="utf-8">
   <title></title>
-  <link rel="stylesheet" href="assets/css/app.css">
+
+
+
+      <link rel="stylesheet" href="../assets/css/app.css">
+
+
 </head>
 
 <body>
@@ -153,13 +158,42 @@
           Multi Level
         </a>
       </li>
+      <li class="side-menu__lists__list">
+        <a href="#">
+          <svg class="svg-icon">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#build"></use>
+          </svg>
+          Boxes
+  
+        </a>
+      </li>
+  
+      <li class="side-menu__lists__list">
+        <a href="#">
+          <svg class="svg-icon">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
+          </svg>
+          Utils
+        </a>
+      </li>
+  
+      <li class="side-menu__lists__list">
+        <a href="#">
+          <svg class="svg-icon">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#pets"></use>
+          </svg>
+          Tools
+  
+        </a>
+      </li>
   
       </li>
     </ul>
   </div>
 
-<div class="section-container">
-  <div class="container-fluid">
+  <div class="section-container">
+
+    <div class="container-fluid">
   <div class="row">
     <div class="col-lg-6 col-xl-3">
       <div class="boxes">
@@ -175,7 +209,7 @@
 
           <div class="col-8 v-align">
             <h5>14,564</h5>
-            <p>Today's visits</p>
+            <p></p>
           </div>
         </div>
       </div>
@@ -195,7 +229,7 @@
 
           <div class="col-8 v-align">
             <h5>32,564</h5>
-            <p>Total Revenue</p>
+            <p></p>
           </div>
         </div>
       </div>
@@ -215,7 +249,7 @@
 
           <div class="col-8 v-align">
             <h5>280</h5>
-            <p>Today's sales</p>
+            <p></p>
           </div>
         </div>
       </div>
@@ -235,7 +269,7 @@
 
           <div class="col-8 v-align">
             <h5>0.3%</h5>
-            <p>Conversion</p>
+            <p></p>
           </div>
         </div>
       </div>
@@ -362,10 +396,10 @@
         <div class="col-12">
           <div class="boxes boxes--flex">
             <img class="boxes__image" src="assets/images/men.jpeg" alt="user picture">
-            <div class="boxes__user-info v-align">
-              <h6>Keith</h6>
+            <div class="boxes__user-info user-role--master v-align">
+              <p>Keith</p>
               <p>keith@gmail.com</p>
-              <p>Manager</p>
+              <h6>Manager</h6>
             </div>
           </div>
         </div>
@@ -374,10 +408,10 @@
         <div class="col-12">
           <div class="boxes boxes--flex">
             <img class="boxes__image" src="assets/images/women.jpeg" alt="user picture">
-            <div class="boxes__user-info v-align">
-              <h6>Anna</h6>
+            <div class="boxes__user-info user-role--user v-align">
+              <p>Anna</p>
               <p>anna@gmail.com</p>
-              <p>Admin</p>
+              <h6>Admin</h6>
             </div>
           </div>
         </div>
@@ -385,17 +419,17 @@
         <div class="col-12">
           <div class="boxes boxes--flex">
             <img class="boxes__image" src="assets/images/women1.jpeg" alt="user picture">
-            <div class="boxes__user-info v-align">
-              <h6>John</h6>
+            <div class="boxes__user-info user-role--admin v-align">
+              <p>John</p>
               <p>john@gmail.com</p>
-              <p>Manager</p>
+              <h6>Manager</h6>
             </div>
           </div>
         </div>
                 </div>
             </div>
 
-</div>
+  </div>
 
 
 
@@ -406,42 +440,39 @@
 
 
   <script "text/javascript" src="../node_modules/chart.js/dist/chart.js"></script>
-<script type="text/javascript">
+  <script type="text/javascript">
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var chart = new Chart(ctx, {
+      // The type of chart we want to create
+      type: 'line',
 
-  var ctx = document.getElementById('myChart').getContext('2d');
-var chart = new Chart(ctx, {
-    // The type of chart we want to create
-    type: 'line',
-
-    // The data for our dataset
-    data: {
+      // The data for our dataset
+      data: {
         labels: ["January", "February", "March", "April", "May", "June", "July"],
         datasets: [{
-            label: "My First dataset",
-            backgroundColor: 'rgb(255,215,0)',
-            borderColor: 'rgb(255,69,0)',
-            data: [0, 10, 5, 2, 20, 30, 45],
+          label: "My First dataset",
+          backgroundColor: 'rgb(255,215,0)',
+          borderColor: 'rgb(255,69,0)',
+          data: [0, 10, 5, 2, 20, 30, 45],
         }]
-    },
+      },
 
-    // Configuration options go here
-    options: {}
-});
+      // Configuration options go here
+      options: {}
+    });
+  </script>
 
-</script>
+  <script "text/javascript" src="../node_modules/chart.js/dist/chart.js"></script>
+  <script type="text/javascript">
+    var ctx = document.getElementById('myChart2').getContext('2d');
+    var chart = new Chart(ctx, {
+      // The type of chart we want to create
+      type: 'radar',
 
-<script "text/javascript" src="../node_modules/chart.js/dist/chart.js"></script>
-<script type="text/javascript">
-
-var ctx = document.getElementById('myChart2').getContext('2d');
-var chart = new Chart(ctx, {
-  // The type of chart we want to create
-  type: 'radar',
-
-  // The data for our dataset
-  data: {
-      labels: ["January", "February", "March", "April", "May", "June", "July"],
-      datasets: [{
+      // The data for our dataset
+      data: {
+        labels: ["January", "February", "March", "April", "May", "June", "July"],
+        datasets: [{
           label: "My First dataset",
           backgroundColor: 'rgb(255, 99, 132)',
           backgroundColor: 'rgb(255, 45, 132)',
@@ -449,27 +480,25 @@ var chart = new Chart(ctx, {
 
           borderColor: 'rgb(255, 99, 132)',
           data: [0, 10, 5, 2, 20, 30, 45],
-      }]
-  },
+        }]
+      },
 
-  // Configuration options go here
-  options: {}
-});
+      // Configuration options go here
+      options: {}
+    });
+  </script>
 
-</script>
+  <script "text/javascript" src="../node_modules/chart.js/dist/chart.js"></script>
+  <script type="text/javascript">
+    var ctx = document.getElementById('myChart3').getContext('2d');
+    var chart = new Chart(ctx, {
+      // The type of chart we want to create
+      type: 'doughnut',
 
-<script "text/javascript" src="../node_modules/chart.js/dist/chart.js"></script>
-<script type="text/javascript">
-
-var ctx = document.getElementById('myChart3').getContext('2d');
-var chart = new Chart(ctx, {
-  // The type of chart we want to create
-  type: 'doughnut',
-
-  // The data for our dataset
-  data: {
-      labels: ["January", "February", "March", "April", "May", "June", "July"],
-      datasets: [{
+      // The data for our dataset
+      data: {
+        labels: ["January", "February", "March", "April", "May", "June", "July"],
+        datasets: [{
           label: "My First dataset",
           backgroundColor: 'rgb(125, 99, 132)',
           backgroundColor: 'rgb(55, 99, 132)',
@@ -481,18 +510,18 @@ var chart = new Chart(ctx, {
 
           borderColor: 'rgb(255, 99, 132)',
           data: [0, 10, 5, 2, 20, 30, 45],
-      }]
-  },
+        }]
+      },
 
-  // Configuration options go here
-  options: {}
-});
-
-</script>
+      // Configuration options go here
+      options: {}
+    });
+  </script>
 
 
 
 
 
 </body>
+
 </html>

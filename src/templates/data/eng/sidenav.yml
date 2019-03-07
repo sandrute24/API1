@@ -1,0 +1,17 @@
+main:
+  dashboard: Dashboard
+  kit: UX Kit
+  typo: Typography
+  components: Components
+more:
+  tables: Tables
+  charts: Charts
+  maps: Maps
+  mail: Mail
+extras:
+  pages: Pages
+  extras: Extras
+  level: Multi Level
+  boxes: Boxes
+  utils: Utils
+  tools: Tools

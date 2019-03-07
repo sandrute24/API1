@@ -81,10 +81,20 @@
     </div>
   </div>
 
+
+  {{#is default.lang 'lt'}}
+        <script type="text/javascript" src="../../node_modules/chart.js/dist/Chart.min.js"></script>
+        {{else}}
+
+        <script type="text/javascript" src="../node_modules/chart.js/dist/Chart.min.js"></script>
+
+        {{/is}}
+
+
   <div class="row">
     <div class="col-xl-4">
       <div class="boxes">
-        <h6 class="boxes__title">Yearly Sales Report</h6>
+        <h6 class="boxes__title">{{dashboard.charts.report}}</h6>
 
         <canvas id="myChart"></canvas>
 
@@ -95,7 +105,7 @@
 
     <div class="col-xl-4">
       <div class="boxes">
-        <h6 class="boxes__title">Total Revenue</h6>
+        <h6 class="boxes__title">{{dashboard.charts.total}}</h6>
 
         <canvas id="myChart2"></canvas>
 
@@ -109,8 +119,10 @@
 
     <div class="col-xl-4">
       <div class="boxes">
-        <h6 class="boxes__title">Total Revenue</h6>
+        <h6 class="boxes__title">{{dashboard.charts.total1}}</h6>
+
         <canvas id="myChart3"></canvas>
+
 
       </div>
     </div>
@@ -120,8 +132,8 @@
   <div class="row">
     <div class="col-xl-8">
       <div class="boxes">
-        <h6 class="boxes__title">Latest projects</h6>
-        <p class="boxes__subheading">Your awesome text goes here.</p>
+        <h6 class="boxes__title">{{dashboard.charts.projects}}</h6>
+        <p class="boxes__subheading">{{dashboard.charts.text}}</p>
 
         <table class="table">
           <thead>
@@ -200,7 +212,7 @@
       <div class="row">
         <div class="col-12">
           <div class="boxes boxes--flex">
-            <img class="boxes__image" src="assets/images/men.jpeg" alt="user picture">
+            <img class="boxes__image" src="../assets/images/men.jpeg" alt="user picture">
             <div class="boxes__user-info user-role--master v-align">
               <p>Keith</p>
               <p>keith@gmail.com</p>
@@ -212,7 +224,7 @@
 
         <div class="col-12">
           <div class="boxes boxes--flex">
-            <img class="boxes__image" src="assets/images/women.jpeg" alt="user picture">
+            <img class="boxes__image" src="../assets/images/women.jpeg" alt="user picture">
             <div class="boxes__user-info user-role--user v-align">
               <p>Anna</p>
               <p>anna@gmail.com</p>
@@ -223,7 +235,7 @@
 
         <div class="col-12">
           <div class="boxes boxes--flex">
-            <img class="boxes__image" src="assets/images/women1.jpeg" alt="user picture">
+            <img class="boxes__image" src="../assets/images/women1.jpeg" alt="user picture">
             <div class="boxes__user-info user-role--admin v-align">
               <p>John</p>
               <p>john@gmail.com</p>
