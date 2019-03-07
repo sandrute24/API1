@@ -17,6 +17,22 @@
   text-align: right;
   margin-bottom: 15px;
 }
+.boxes--right {
+  text-align: right;
+}
+.boxes__image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  margin-right: 10px;
+}
+.boxes--flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 
 .v-align {
   display: -webkit-box;
@@ -9842,6 +9858,9 @@ a.text-dark:hover, a.text-dark:focus {
   border: 4px solid;
   position: relative;
 }
+.circle--border {
+  border: 5px solid;
+}
 .circle--success {
   background: rgba(102, 187, 106, 0.75);
   border-color: rgba(102, 187, 106, 0.35);
@@ -9865,7 +9884,6 @@ a.text-dark:hover, a.text-dark:focus {
   right: 0;
   bottom: 0;
   -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   width: 32px;
   height: 32px;
