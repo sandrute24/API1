@@ -39,6 +39,20 @@
         &__link {
           margin: 5px;
           list-style-type: none;
+          display: inline-block;
+        }
+      }
+
+      .dropdown-menu {
+        &__item {
+          display: -webkit-box;
+          .circle{
+            @include circle($height: 40px, $width: 40px)
+          }
+
+          &__title {
+            margin-left: 10px;
+          }
         }
       }
     }
@@ -46,9 +60,7 @@
 }
 
 .nav-bar__lists__link {
-  margin: 5px;
-  margin-top: 25px;
-  margin-right: 900px;
+  margin: 25px 900px 5px 5px;
 }
 
 .svg-icon {

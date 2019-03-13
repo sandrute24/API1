@@ -11,6 +11,9 @@
   padding: 15px;
   text-align: left;
   margin-bottom: 15px;
+  .circle{
+    @include circle();
+  }
 
   &__title {}
 
