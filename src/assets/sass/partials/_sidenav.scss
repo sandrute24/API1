@@ -1,47 +1,74 @@
 .side-menu {
-    position: fixed;
-    top: $nav-height;
-    height: 100%;
-    background: #fff;
-    width: $nav-left-width;
-    -webkit-box-shaddow: $box-shadow;
-    -webkit-box-shadow: $box-shadow;
-            box-shadow: $box-shadow;
-    overflow: scroll;
-    padding: 20px 0 80px;
-    &__lists {
-        &__list {
+  position: fixed;
+  top: $nav-height;
+  height: 100%;
+  background: #fff;
+  width: $nav-left-width;
+  -webkit-box-shaddow: $box-shadow;
+  -webkit-box-shadow: $box-shadow;
+  box-shadow: $box-shadow;
+  overflow: scroll;
+  padding: 20px 0 80px;
 
-            position: relative;
-            border-left: 3px solid #fff;
-            &:hover{
-                a {
-                    color: $default-bg;
-                }
-            }
-            a {
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                -webkit-box-align: center;
-                -ms-flex-align: center;
-                align-items: center;
-                svg {
-                }
-            }
-            &:after {
-                @include arrow;
-            }
-                &.active {
-                    border-color: $default-bg;
-                    a {
-                        background:$bg-color;
-                    }
-                }
-            }
+  &__lists {
+    &__list {
+      position: relative;
+      border-left: 3px solid #fff;
+      padding: 10px;
+
+      &:hover {
+        a {
+          color: $default-bg;
         }
-        &__title {
-            padding: 12px 20px;
-            font-size: 12px;
+      }
+
+      a {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+
+        svg {}
+      }
+
+      &:after {
+        @include arrow;
+      }
+
+      &.active {
+        border-color: $default-bg;
+
+        a {
+          background: $bg-color;
         }
+      }
     }
+  }
+
+  &__title {
+    padding: 12px 20px;
+    font-size: 12px;
+  }
+
+  &--closed {
+    width: 70px;
+
+    .side-menu__lists {
+      &__list {
+        span {
+          display: none;
+        }
+
+        &:after {
+          display: none;
+        }
+      }
+
+      &__title {
+        display: none;
+      }
+    }
+  }
+}

@@ -9805,6 +9805,7 @@ h5 {
 .side-menu__lists__list {
   position: relative;
   border-left: 3px solid #fff;
+  padding: 10px;
 }
 .side-menu__lists__list:hover a {
   color: red;
@@ -9842,6 +9843,18 @@ h5 {
 .side-menu__title {
   padding: 12px 20px;
   font-size: 12px;
+}
+.side-menu--closed {
+  width: 70px;
+}
+.side-menu--closed .side-menu__lists__list span {
+  display: none;
+}
+.side-menu--closed .side-menu__lists__list:after {
+  display: none;
+}
+.side-menu--closed .side-menu__lists__title {
+  display: none;
 }
 
 .side-menu {
@@ -9859,6 +9872,7 @@ h5 {
 .side-menu__lists__list {
   position: relative;
   border-left: 3px solid #fff;
+  padding: 10px;
 }
 .side-menu__lists__list:hover a {
   color: red;
@@ -9896,6 +9910,18 @@ h5 {
 .side-menu__title {
   padding: 12px 20px;
   font-size: 12px;
+}
+.side-menu--closed {
+  width: 70px;
+}
+.side-menu--closed .side-menu__lists__list span {
+  display: none;
+}
+.side-menu--closed .side-menu__lists__list:after {
+  display: none;
+}
+.side-menu--closed .side-menu__lists__title {
+  display: none;
 }
 
 .circle--border {

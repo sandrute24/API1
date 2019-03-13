@@ -4,126 +4,32 @@
 <head>
   <meta charset="utf-8">
   <title></title>
-
-
-
   {{#is default.lang 'lt'}}
     <link rel="stylesheet" href="../assets/css/app.css">
     {{else}}
       <link rel="stylesheet" href="assets/css/app.css">
   {{/is}}
-
-
 </head>
 
 <body>
   {{>navbar}}
   {{>sidenav}}
 
-  <script
-     src="http://code.jquery.com/jquery-3.3.1.min.js"
-     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-     crossorigin="anonymous"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-</script>
-
-<script "text/javascript" src="assets/bootstrap/js/bootstrap.min.js">
-</script>
-
   <div class="section-container">
     {{>title}}
-
     {{body}}
-  </div>
 
   {{#is basename 'index'}}
     {{>footer}}
   {{/is}}
 
-
   <div class="svg-sprite-container">{{> 'sprite.symbol' }}</div>
+  <script type="text/javascript" src="../node_modules/chart.js/dist/Chart.min.js"></script>
+  <script "text/javascript" src="assets/js/js/chart.js"> </script>
+  <script "text/javascript" src="assets/js/js/jquery.min.js"> </script>
+  <script "text/javascript" src="assets/js/js/popper.min.js"> </script>
+  <script "text/javascript" src="assets/js/js/bootstrap.js"> </script>
+  <script "text/javascript" src="assets/js/js/app.js"> </script>
 
-
-
-  <script "text/javascript" src="../node_modules/chart.js/dist/chart.js"></script>
-  <script type="text/javascript">
-    var ctx = document.getElementById('myChart').getContext('2d');
-    var chart = new Chart(ctx, {
-      // The type of chart we want to create
-      type: 'line',
-
-      // The data for our dataset
-      data: {
-        labels: ["January", "February", "March", "April", "May", "June", "July"],
-        datasets: [{
-          label: "My First dataset",
-          backgroundColor: 'rgb(255,215,0)',
-          borderColor: 'rgb(255,69,0)',
-          data: [0, 10, 5, 2, 20, 30, 45],
-        }]
-      },
-
-      // Configuration options go here
-      options: {}
-    });
-  </script>
-
-  <script "text/javascript" src="../node_modules/chart.js/dist/chart.js"></script>
-  <script type="text/javascript">
-    var ctx = document.getElementById('myChart2').getContext('2d');
-    var chart = new Chart(ctx, {
-      // The type of chart we want to create
-      type: 'radar',
-
-      // The data for our dataset
-      data: {
-        labels: ["January", "February", "March", "April", "May", "June", "July"],
-        datasets: [{
-          label: "My First dataset",
-          backgroundColor: 'rgb(255, 99, 132)',
-          backgroundColor: 'rgb(255, 45, 132)',
-          backgroundColor: 'rgb(235, 32, 30)',
-
-          borderColor: 'rgb(255, 99, 132)',
-          data: [0, 10, 5, 2, 20, 30, 45],
-        }]
-      },
-
-      // Configuration options go here
-      options: {}
-    });
-  </script>
-
-  <script "text/javascript" src="../node_modules/chart.js/dist/chart.js"></script>
-  <script type="text/javascript">
-    var ctx = document.getElementById('myChart3').getContext('2d');
-    var chart = new Chart(ctx, {
-      // The type of chart we want to create
-      type: 'doughnut',
-
-      // The data for our dataset
-      data: {
-        labels: ["January", "February", "March", "April", "May", "June", "July"],
-        datasets: [{
-          label: "My First dataset",
-          backgroundColor: 'rgb(125, 99, 132)',
-          backgroundColor: 'rgb(55, 99, 132)',
-          backgroundColor: 'rgb(21,43, 45)',
-          backgroundColor: 'rgb(43, 99, 132)',
-          backgroundColor: 'rgb(56,28, 34)',
-          backgroundColor: 'rgb(45,67, 56)',
-          backgroundColor: 'rgb(12,87, 110)',
-
-          borderColor: 'rgb(255, 99, 132)',
-          data: [0, 10, 5, 2, 20, 30, 45],
-        }]
-      },
-
-      // Configuration options go here
-      options: {}
-    });
-  </script>
 </body>
-
 </html>
