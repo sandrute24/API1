@@ -9633,6 +9633,10 @@ a.text-dark:hover, a.text-dark:focus {
   margin-left: 255px;
 }
 
+.section-title__nav a:first-of-type a:after {
+  content: '/';
+}
+
 .boxes {
   -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
   box-shadow: 3px;
@@ -9673,13 +9677,23 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .user-role--user {
-  color: green;
+  color: blue;
 }
 .user-role--admin {
   color: gold;
 }
 .user-role--master {
   color: red;
+}
+
+.sidenav-closed .topbar .nav-bar--left {
+  width: 70px;
+}
+.sidenav-closed .topbar .nav-bar span {
+  display: none;
+}
+.sidenav-closed .section-container {
+  margin-left: 85px;
 }
 
 .v-align {
@@ -9728,7 +9742,7 @@ h5 {
 .topbar .nav-bar {
   position: relative;
   height: 70px;
-  background: red;
+  background: #32CD32;
 }
 .topbar .nav-bar--left {
   width: 240px;
@@ -9778,16 +9792,15 @@ h5 {
 .svg-icon {
   width: 20px;
   height: 20px;
-  fill: green;
+  fill: #00008B;
   margin: 0;
 }
 
 .search-container {
-  width: 30px;
+  width: 150px;
   height: 30px;
   display: inherit;
-  margin-top: 25px;
-  margin-right: 900px;
+  margin-left: 20px;
 }
 
 .side-menu {
@@ -9836,9 +9849,7 @@ h5 {
 }
 .side-menu__lists__list.active {
   border-color: red;
-}
-.side-menu__lists__list.active a {
-  background: #ebebeb;
+  background: yellow;
 }
 .side-menu__title {
   padding: 12px 20px;
@@ -9903,9 +9914,7 @@ h5 {
 }
 .side-menu__lists__list.active {
   border-color: red;
-}
-.side-menu__lists__list.active a {
-  background: #ebebeb;
+  background: yellow;
 }
 .side-menu__title {
   padding: 12px 20px;

@@ -8,7 +8,7 @@
   .nav-bar {
     position: relative;
     height: $nav-height;
-    background: $default-bg;
+    background: #32CD32;
 
     &--left {
       width: $nav-left-width;
@@ -46,7 +46,8 @@
       .dropdown-menu {
         &__item {
           display: -webkit-box;
-          .circle{
+
+          .circle {
             @include circle($height: 40px, $width: 40px)
           }
 
@@ -66,14 +67,14 @@
 .svg-icon {
   width: 20px;
   height: 20px;
-  fill: green;
+  fill: #00008B;
   margin: 0;
 }
 
 .search-container {
-  width: 30px;
+  width: 150px;
   height: 30px;
   display: inherit;
-  margin-top: 25px;
-  margin-right: 900px;
+  margin-left: 20px;
+
 }

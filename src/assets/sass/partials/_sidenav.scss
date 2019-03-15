@@ -39,10 +39,7 @@
 
       &.active {
         border-color: $default-bg;
-
-        a {
-          background: $bg-color;
-        }
+        background: yellow;
       }
     }
   }
