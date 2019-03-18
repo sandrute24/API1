@@ -30,7 +30,11 @@
         -ms-flex-align: center;
         align-items: center;
 
-        svg {}
+        svg {
+          width: 25px;
+          height: 25px;
+          margin: 7px;
+        }
       }
 
       &:after {
@@ -39,7 +43,7 @@
 
       &.active {
         border-color: $default-bg;
-        background: yellow;
+        background: #F5F5F5;
       }
     }
   }
