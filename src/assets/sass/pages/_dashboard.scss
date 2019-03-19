@@ -36,3 +36,10 @@
     fill: #fff;
   }
 }
+
+.circle-drop {
+  &--success {
+    background: $color-success;
+    border-color: $color-success-ol;
+  }
+}

@@ -2,10 +2,12 @@
 @import 'icons.scss';
 @import 'layout.scss';
 @import 'utils.scss';
+@import 'fonts.scss';
 
 body {
   margin: 0;
   background: $bg-color;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 ul {
@@ -15,13 +17,14 @@ ul {
 }
 
 p {
-  margin: 0;
+  padding: 0;
 }
 
 h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+h6 {
   margin: 0;
 }
