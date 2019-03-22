@@ -9633,6 +9633,10 @@ a.text-dark:hover, a.text-dark:focus {
   margin-left: 255px;
 }
 
+.background-color {
+  background-color: #ebebeb;
+}
+
 .section-title__nav a:first-of-type a:after {
   content: '/';
 }
@@ -9709,6 +9713,15 @@ a.text-dark:hover, a.text-dark:focus {
   flex-direction: column;
 }
 
+.perfec-center {
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 /* cyrillic-ext */
 @font-face {
   font-family: 'Roboto Condensed';
@@ -9767,7 +9780,6 @@ a.text-dark:hover, a.text-dark:focus {
 }
 body {
   margin: 0;
-  background: #ebebeb;
   font-family: 'Roboto Condensed', sans-serif;
 }
 
@@ -9788,6 +9800,19 @@ h4,
 h5,
 h6 {
   margin: 0;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: none;
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset !important;
 }
 
 .topbar {
@@ -10064,4 +10089,51 @@ h6 {
 .circle-drop--success {
   background: rgba(102, 187, 106, 0.75);
   border-color: rgba(102, 187, 106, 0.35);
+}
+
+.login__title {
+  margin-bottom: 40px;
+  text-align: center;
+}
+.login__form__item {
+  position: relative;
+  margin-bottom: 20px;
+}
+.login__form__item input {
+  width: 100%;
+  height: 56px;
+  border: 1px solid #979797;
+  border-radius: 3px;
+  background: #fff;
+  color: #6c757d;
+  padding-left: 18px;
+}
+.login__form__item input:focus {
+  outline: none;
+  border-color: red;
+  -webkit-box-shadow: 0 0 0 1px red;
+  box-shadow: 0 0 0 1px red;
+}
+.login__form__item input:valid ~ label {
+  top: -7px;
+  padding: 0 6px;
+  font-size: 12px;
+}
+.login__form__item input:focus ~ label {
+  top: -7px;
+  padding: 0 6px;
+  font-size: 12px;
+}
+.login__form__item label {
+  position: absolute;
+  background: #fff;
+  font-size: 16px;
+  color: #adb5bd;
+  top: 18px;
+  left: 18px;
+  margin: 0;
+  -webkit-transform: .2s ease all;
+  -o-transition: .2s ease all;
+  transition: .2s ease all;
+  pointer-events: none;
 }
