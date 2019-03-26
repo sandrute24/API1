@@ -17,28 +17,32 @@
   <div class="row">
     <div class="col-4 offset-4">
       <div class="login">
-        <div class="login_title">
-          <svg class="svg-icon-nav">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#offline"></use>
-          </svg>
-        </div>
+        <div class="login_title">Tekstas        </div>
 
         <div class="login__form">
           <form class="login-form" name="login-form" action="dashboard.html" method="post">
 
             <div class="login__form__item">
               <input type="email" name="email" value="" required="required">
-              <label for="email">Email Address</label>
+              <label for="label-inside">Email Address</label>
             </div>
 
             <div class="login__form__item">
               <input type="password" name="password" value="" required="required">
-              <label for="password">Password</label>
+              <label for="label-inside">Password</label>
             </div>
 
-            <div class="login__form__item">
-              <button type="button" name="button">Button</button>
+
+
+              <div class="login__form__item login__form__item--checkbox">
+                <div class="checkbox">
+                <input type="checkbox" name="remember" value="" required="required">
+                <label for="remember">Remember me</label>
+              </div>
             </div>
+
+
+            <button class="button button--full-width">Button</button>
 
           </form>
         </div>

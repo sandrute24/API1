@@ -9815,6 +9815,59 @@ select:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0px 1000px #fff inset !important;
 }
 
+.button {
+  display: block;
+  width: auto;
+  height: 50px;
+  line-height: 50px;
+  background: orange;
+  border: 0;
+  color: #fff;
+  border-radius: 100px;
+  -webkit-transition: 3s;
+  -o-transition: 3s;
+  transition: 3s;
+  text-decoration: none;
+  text-align: center;
+}
+.button:hover {
+  -webkit-filter: brightness(85%);
+  filter: brightness(85%);
+}
+.button:focus {
+  outline: none;
+}
+.button--full-width {
+  width: 100%;
+}
+
+.checkbox input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  height: 14px;
+  width: 14px;
+  margin-right: 10px;
+  position: relative;
+  top: 0;
+}
+.checkbox input:before {
+  border-width: 2px solid red;
+  border-style: solid;
+  content: "";
+  height: 14px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+.checkbox input:after {
+  background: #fff;
+}
+
 .topbar {
   position: fixed;
   top: 0;
@@ -10092,14 +10145,14 @@ select:-webkit-autofill:focus {
 }
 
 .login__title {
-  margin-bottom: 40px;
   text-align: center;
+  display: block;
 }
 .login__form__item {
   position: relative;
   margin-bottom: 20px;
 }
-.login__form__item input {
+.login__form__item input:not([type=checkbox]) {
   width: 100%;
   height: 56px;
   border: 1px solid #979797;
@@ -10108,23 +10161,23 @@ select:-webkit-autofill:focus {
   color: #6c757d;
   padding-left: 18px;
 }
-.login__form__item input:focus {
+.login__form__item input:not([type=checkbox]):focus {
   outline: none;
   border-color: red;
   -webkit-box-shadow: 0 0 0 1px red;
   box-shadow: 0 0 0 1px red;
 }
-.login__form__item input:valid ~ label {
+.login__form__item input:not([type=checkbox]):valid ~ label {
   top: -7px;
   padding: 0 6px;
   font-size: 12px;
 }
-.login__form__item input:focus ~ label {
+.login__form__item input:not([type=checkbox]):focus ~ label {
   top: -7px;
   padding: 0 6px;
   font-size: 12px;
 }
-.login__form__item label {
+.login__form__item .label-inside {
   position: absolute;
   background: #fff;
   font-size: 16px;
@@ -10136,4 +10189,30 @@ select:-webkit-autofill:focus {
   -o-transition: .2s ease all;
   transition: .2s ease all;
   pointer-events: none;
+}
+
+.button {
+  display: block;
+  width: auto;
+  height: 50px;
+  line-height: 50px;
+  background: orange;
+  border: 0;
+  color: #fff;
+  border-radius: 100px;
+  -webkit-transition: 3s;
+  -o-transition: 3s;
+  transition: 3s;
+  text-decoration: none;
+  text-align: center;
+}
+.button:hover {
+  -webkit-filter: brightness(85%);
+  filter: brightness(85%);
+}
+.button:focus {
+  outline: none;
+}
+.button--full-width {
+  width: 100%;
 }

@@ -1,13 +1,13 @@
 .login {
   &__title{
-    margin-bottom: 40px;
     text-align: center;
+    display: block;
   }
   &__form{
     &__item{
       position: relative;
-      @include default-input();
       margin-bottom: 20px;
+      @include default-input();
     }
   }
 }
