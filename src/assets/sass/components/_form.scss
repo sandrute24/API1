@@ -52,5 +52,6 @@ select:-webkit-autofill:focus {
       font-size: 12px;
     }
   }
-@include default-label($background);
+@include default-label($background: #fff)
+
 }

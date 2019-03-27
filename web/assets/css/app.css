@@ -9650,6 +9650,15 @@ a.text-dark:hover, a.text-dark:focus {
   text-align: left;
   margin-bottom: 15px;
 }
+.boxes--profile {
+  height: 200px;
+}
+.boxes--profile-picture {
+  height: 500px;
+}
+.boxes--profile-side {
+  height: 500px;
+}
 .boxes .circle {
   height: 80px;
   width: 80px;
@@ -9824,9 +9833,9 @@ select:-webkit-autofill:focus {
   border: 0;
   color: #fff;
   border-radius: 100px;
-  -webkit-transition: 3s;
-  -o-transition: 3s;
-  transition: 3s;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
   text-decoration: none;
   text-align: center;
 }
@@ -9841,31 +9850,50 @@ select:-webkit-autofill:focus {
   width: 100%;
 }
 
-.checkbox input {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background: transparent;
-  border: 0;
-  cursor: pointer;
-  height: 14px;
-  width: 14px;
-  margin-right: 10px;
+.btn {
+  margin: 3px;
+}
+
+.checkbox {
   position: relative;
-  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
-.checkbox input:before {
-  border-width: 2px solid red;
-  border-style: solid;
+.checkbox label {
+  cursor: pointer;
+  margin-left: 10px;
+}
+.checkbox label:before, .checkbox label:after {
   content: "";
-  height: 14px;
-  left: 0;
   position: absolute;
-  top: 0;
-  z-index: 1;
+  left: 0;
 }
-.checkbox input:after {
+.checkbox label:before {
+  width: 20px;
+  height: 20px;
   background: #fff;
+  border-radius: 2px;
+  border: 2px solid grey;
+  transition: background 0.3s;
+}
+.checkbox input[type="checkbox"] {
+  visibility: hidden;
+  outline: 0;
+}
+.checkbox input[type="checkbox"]:checked + label:before {
+  background: orange;
+  border: 0;
+}
+.checkbox input[type="checkbox"]:checked + label:after {
+  width: 12px;
+  height: 6px;
+  border: 2px solid #fff;
+  border-top-style: none;
+  border-right-style: none;
+  -webkit-transform: translate(4px, 5.38462px) rotate(-45deg);
+  -ms-transform: translate(4px, 5.38462px) rotate(-45deg);
+  transform: translate(4px, 5.38462px) rotate(-45deg);
 }
 
 .topbar {
@@ -10200,9 +10228,9 @@ select:-webkit-autofill:focus {
   border: 0;
   color: #fff;
   border-radius: 100px;
-  -webkit-transition: 3s;
-  -o-transition: 3s;
-  transition: 3s;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
   text-decoration: none;
   text-align: center;
 }
@@ -10215,4 +10243,19 @@ select:-webkit-autofill:focus {
 }
 .button--full-width {
   width: 100%;
+}
+
+.btn {
+  margin: 3px;
+}
+
+.profile-picture {
+  margin: auto;
+  align-items: center;
+  display: inline-block;
+  text-align: center;
+}
+
+.text-form {
+  margin-top: 50px;
 }

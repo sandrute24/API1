@@ -1,31 +1,47 @@
+$checkbox-size: 20px;
+$checkbox-border-radius: 2px;
+$checkbox-padding: 4px;
+$checkmark-size: $checkbox-size - 2 * $checkbox-padding;
 .checkbox{
-  input{
-      -webkit-appearance: none;
-         -moz-appearance: none;
-              appearance: none;
-              background: transparent;
-              border: 0;
-              cursor: pointer;
-              height: 14px;
-              width: 14px;
-              margin-right: 10px;
-              position: relative;
-              top: 0;
-              &:before{
-                border-width: 2px solid red;
-                border-style: solid;
-                content: "";
-                height: 14px;
-                left: 0;
-                position: absolute;
-                top: 0;
-                z-index: 1;
-            }
-            &:checked:before{
-
-            }
-            &:after{
-              background: #fff;
-            }
-  }
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    label{
+        cursor: pointer;
+        margin-left: 10px;
+        &:before, &:after{
+          content: "";
+          position: absolute;
+          left: 0;
+        }
+        &:before{
+          width: $checkbox-size;
+          height: $checkbox-size;
+          background: #fff;
+          border-radius: $checkbox-border-radius;
+          border: 2px solid grey;
+          transition: background $transition;
+        }
+    }
+    input[type="checkbox"]{
+      visibility: hidden;
+      outline: 0;
+      &:checked{
+        + label:before{
+          background: orange;
+          border: 0;
+        }
+        + label:after{
+          width: $checkmark-size;
+          height: $checkmark-size / 2;
+          border: 2px solid #fff;
+          border-top-style: none;
+          border-right-style: none;
+          -webkit-transform: translate($checkbox-padding, ($checkbox-size / 2) - ($checkmark-size / 2.6)) rotate(-45deg);
+                    -ms-transform: translate($checkbox-padding, ($checkbox-size / 2) - ($checkmark-size / 2.6)) rotate(-45deg);
+                        transform: translate($checkbox-padding, ($checkbox-size / 2) - ($checkmark-size / 2.6)) rotate(-45deg);
+        }
+      }
+    }
 }
