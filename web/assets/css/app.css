@@ -9651,13 +9651,13 @@ a.text-dark:hover, a.text-dark:focus {
   margin-bottom: 15px;
 }
 .boxes--profile {
-  height: 200px;
+  height: 400px;
 }
 .boxes--profile-picture {
-  height: 500px;
+  height: 400px;
 }
 .boxes--profile-side {
-  height: 500px;
+  height: 200px;
 }
 .boxes .circle {
   height: 80px;
@@ -10006,6 +10006,16 @@ select:-webkit-autofill:focus {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
   overflow: scroll;
   padding: 20px 0 80px;
+  z-index: 999;
+}
+.side-menu--right {
+  right: 0;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.side-menu--right--closed {
+  right: -240px;
 }
 .side-menu__lists__list {
   position: relative;
@@ -10076,6 +10086,16 @@ select:-webkit-autofill:focus {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
   overflow: scroll;
   padding: 20px 0 80px;
+  z-index: 999;
+}
+.side-menu--right {
+  right: 0;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.side-menu--right--closed {
+  right: -240px;
 }
 .side-menu__lists__list {
   position: relative;
@@ -10258,4 +10278,52 @@ select:-webkit-autofill:focus {
 
 .text-form {
   margin-top: 50px;
+}
+
+.skillbar {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.skillbar-bar:before {
+  background: #eee;
+  content: "";
+  height: 3px;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+.skillbar-bar {
+  height: 3px;
+  width: 0px;
+  background: #323232;
+  transition-property: width, background-color;
+}
+
+.skillbar-title {
+  color: #323232;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.skill-bar-percent {
+  float: right;
+  display: inline-block;
+  color: #323232;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* CENTERING ONLY */
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
 }
